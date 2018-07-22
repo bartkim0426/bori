@@ -1,0 +1,60 @@
+body{
+/*	border:2px solid red;*/
+	width:85%;
+	margin:75px 50px;
+}
+.catnav {
+	width:15%;
+	right:50px;
+	top:20px;
+	font-family: 'Yeon Sung', cursive;
+	position: fixed;
+/*	border:2px solid blue; */
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.navmenu{
+	text-align: right;
+}
+.navmenu img{
+	width: 50px;
+}
+.titlemenu{
+	font-size: 1.8rem;
+	padding: 10px 20px;
+	background: #ccc;
+}
+.titlemenu:hover{
+	background: grey;
+}
+.nav4{
+	font-size: 1.3rem;
+	background: ;
+	padding: 10px;
+	padding-left: 50px;
+	display: block;
+}
+.submenu .nav4:hover{
+	background: rgba(0,0,0,0.12);
+}
+.navclock{
+	background: white;
+}
+.navclock .titlemenu{
+	padding: 10px;
+	background: white;
+	overflow: hidden;
+}
+.clockbox{
+	text-align: center;
+	padding:0 15px;
+	font-size: 1rem;
+	line-height: 40px;
+	background: url("img/tail_mid.png") no-repeat 50% 60%;
+	/*background-image: url("img/tail_mid.png");*/
+	/*background-repeat: no-repeat;*/
+	/*background-position: 50% 60%, 50% 100%;*/
+    white-space: pre-wrap;
+}
