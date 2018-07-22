@@ -1,0 +1,15 @@
+<!--
+<input type="text" data-type="year" id="u_date7"  maxlength="4" class="input_txt year" value="" data-name="방문 신청 일정" style="width:68px">
+  <span class="sorting">
+    <select data-type="month" style="width:80px">
+      <option value="1월">1월</option><option value="2월">2월</option><option value="3월">3월</option><option value="4월">4월</option>
+      <option value="5월">5월</option><option value="6월">6월</option><option value="7월">7월</option><option value="8월">8월</option>
+      <option value="9월">9월</option><option value="10월">10월</option><option value="11월">11월</option><option value="12월">12월</option>
+    </select>
+  </span>
+  <span class="sorting">
+    <select data-type="day" style="width:80px">
+      <option>일</option>
+    </select>
+  </span>
+--

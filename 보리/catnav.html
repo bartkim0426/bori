@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>보리</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="catnav.css">
+<!--<link rel="stylesheet" href="main.css">-->
+<link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-1.12.4.js"></script> 
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung" rel="stylesheet">
+	
+<!--	부트슬트랩 /mdl  voundation  semantic  poiemaweb-->
+</head>
+
+<body>
+
+	<div class="catnav">
+		<div class="navmenu">
+			<div class="img"><img src="img/footmenu.png" alt=""></div>
+		</div>
+		<div class="navchart">
+			<div class="navmedi">
+				<div class="titlemenu" id="menu1">복용약</div>
+					<div class="submenu" id="mmenu1">
+						<div class="navmediout">
+							<a href="navmediout.html" class="nav4">외부구충제</a>
+						</div>
+						<div class="navmediin">
+							<a href="navmediin.html" class="nav4">내부구충제</a>
+						</div>
+					</div>
+			</div>
+			<div class="navhealth">
+				<div class="titlemenu" id="menu2">건강기록</div>	
+					<div class="submenu" id="mmenu2">
+						<div class="navhos">
+							<a href="navhos.html" class="nav4">내원내역</a>
+						</div>
+						<div class="navmemo">
+							<a href="navmemo.html" class="nav4">기타메모</a>
+						</div>
+						<div class="navweight">
+							<a href="navweight.html" class="nav4">체중변화</a> 
+						</div>
+					</div>
+			</div>
+			<div class="navphoto">
+				<div class="titlemenu"><a href="">갤러리</a></div>
+			</div>
+			<div class="navclock">
+				<div class="titlemenu">
+					<div class="clockbox"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+        $ (function(){
+            //메뉴스티커
+            var chk = true;
+            $('.navmenu').click(function(){
+                if( chk ){
+                    $('.navmenu .img img').attr('src','img/footallmenu.png');
+                    chk = false;//이해안감
+                }else{
+                    $('.navmenu .img img').attr('src','img/footmenu.png');
+                    chk = true;//이해안감
+                }
+                $('.navchart').toggle();
+            });
+            //서브메뉴
+            $('.navchart').hide();
+            $('.titlemenu').click(function(){
+                $(this).next().toggle();
+            })
+            $('.submenu').hide();
+            //시계
+            function timeclock(){
+                var now = new Date();
+                var year=now.getFullYear();
+                var mon=now.getMonth()+1;
+                var date=now.getDate();
+                var hour=now.getHours();
+                var apm="오전";
+                if(hour>=12){
+                    apm="오후";
+                }
+                if(hour>12){
+                    hour-=12;
+                }
+                var min=now.getMinutes();
+                var nowTime = year+"년 "+mon+"월 "+date+"일 "+ "\n" +apm + " "+hour+"시 "+min+"분 "
+                $('.clockbox').text(nowTime);
+                setTimeout(timeclock,1000);//줄바꿈
+            }
+            timeclock();
+            //3초마다 바뀌는 이미지
+			// 전역변수
+			var imageType = "mid";
+			// console.log('1. Image type in global: ' + imageType);
+			function changeImage() {
+			    // console.log('2. change image function start');
+			    // console.log('3. image type in func:' + imageType);
+                // var now=new Date();
+                // var sec=now.getSeconds();
+                // if(sec%2==0){
+                //     $('.clockbox').css('background-image','url("img/tail_mid.png") no-repeat 50% 60%');
+                // }else{
+                //     $('.clockbox').css('background-image','url("img/tail_right.png") no-repeat 50% 100%');
+                // }
+                if (imageType === "mid") {
+                    $('.clockbox').css('background','url("img/tail_right.png") no-repeat 50% 60%');
+                    imageType = "right";
+                    // console.log("4. image changed to right: " + imageType);
+				} else {
+                    $('.clockbox').css('background','url("img/tail_mid.png") no-repeat 50% 100%');
+                    imageType = "mid";
+                    // console.log("4. image changed to mid: " + imageType);
+				}
+                setTimeout(changeImage, 1000);
+			}
+			changeImage();
+        })
+	</script>
+</body>
+</html>

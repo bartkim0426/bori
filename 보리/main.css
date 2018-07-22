@@ -1,0 +1,75 @@
+
+body{
+	width:90%;
+	margin:20px auto;
+}
+#header{
+	margin: 0 auto 30px;
+	margin-top: -60px;
+}
+.titlecat{
+	overflow: hidden;
+	font-family: 'East Sea Dokdo', cursive;
+	display: inline-block;
+	margin-left: 150px;
+}
+.titlecat> li{
+	float:left;
+	margin-top: 140px;
+}
+.titlecat>li img{
+	width:120px;
+	height:80px;
+}
+.titlecat .title{
+	font-size: 220px;
+	text-align: center;
+	margin:auto 40px;
+}
+#main{
+	margin:100px auto;
+}
+#main .catprofile{
+	overflow: hidden;
+	display: inline-block;
+}
+#main li{
+	margin: 10px 26px;
+	list-style: none;
+	float: left;
+}
+#main .catprofile .bori img{
+	border-radius: 100%;
+	width:350px;
+	height: 350px;
+}
+#main .catprofile .simba img{
+	width:350px;
+	height: 350px;
+	background-size: cover;
+}
+#main .catprofile .nana img{
+	width:350px;
+	height: 350px;
+	background-size: cover;
+	background-position: 90%;
+	border-radius: 10%;
+}
+#footer:before{
+	content:'';
+	border:1px solid gray;
+	width:40rem;
+	display: block;
+	margin: 20px auto;
+}
+#footer{
+	margin-bottom: 30px;
+}
+.copyright{
+	padding: 15px;
+}
+.copyright li{
+	line-height: 18px;
+	font-size: 15px;
+	text-align: right;
+}
